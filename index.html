@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>playdate</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1 id = "main">playdate</h1>
+        <div class = center>
+            <button id="signUpButton" class="button" >Sign Up</button>
+            <br />
+            <button id="loginButton" class="button" >Login</button>
+        </div>
+    </body>
+</html>
+
+
+<script type="text/javascript">
+    document.getElementById("signUpButton").onclick = function () {
+        location.href = "signup.html";
+    };
+    document.getElementById("loginButton").onclick = function () {
+        location.href = "login.html";
+    };
+</script>
