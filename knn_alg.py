@@ -86,7 +86,7 @@ def getNearest(n, k):
     if nearest == [] and k < cdmatrix.shape[0]: #expand search to more distant pts
         getNearest(n, k+1)
     elif nearest == []:
-        #print("whoops this was not supposed to happen. Happy debugging! :(. Or maybe there's just an odd number of users in which case this ok")
+        print("whoops this was not supposed to happen. Happy debugging! :(. Or maybe there's just an odd number of users in which case this ok")
     else: #create pairing/matching
         nearest = nearest[dist.index(min(dist))]
         my_set.add(n)
@@ -116,7 +116,6 @@ if cleaned_data.shape[0] % 2 == 1:
         dist.remove(dist[odd_one_out_nearest.index(odd_one_out)])
         odd_one_out_nearest.remove(odd_one_out)
     odd_one_out_nearest = odd_one_out_nearest[dist.index(min(dist))] #this will be used later
-    print(odd_one_out_nearest, odd_one_out)
 
 
 # In[282]:
@@ -130,6 +129,7 @@ for key in ind_nearest.keys():
     pairs[pair] = (key, ind_nearest[key])
     pair += 1
 pairs
+print(pairs)
 
 
 # In[283]:
